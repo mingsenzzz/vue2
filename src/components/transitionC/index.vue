@@ -6,8 +6,16 @@
     <transition name="myTransition" :duration="{ enter: 500, leave: 2000 }">
       <div class="myName" v-show="show">我的名字</div>
     </transition>
+
+    <transition
+      enter-active-class="animate__animated animate__slideInRight"
+      leave-active-class="animate__animated animate__slideInLeft"
+    >
+      <div class="myName" v-show="show2">我的名字2</div>
+    </transition>
     <div>
-      <button @click="switchBtn">点击切换</button>
+      <button @click="switchBtn">点击切换1</button>
+      <button @click="show2 = !show2">点击切换2</button>
     </div>
   </div>
 </template>
@@ -17,6 +25,7 @@ export default {
   data() {
     return {
       show: true,
+      show2: true,
     };
   },
   methods: {
@@ -57,5 +66,6 @@ export default {
   background: green;
   height: 100px;
   width: 200px;
+  margin-bottom: 20px;
 }
 </style>
