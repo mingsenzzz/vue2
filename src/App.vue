@@ -1,13 +1,15 @@
 <template>
   <div id="app">
     <input v-fbind:data="n" />
+    <Transition />
   </div>
 </template>
 
 <script>
+import Transition from "./components/transitionC";
 export default {
   name: "App",
-  components: {},
+  components: { Transition },
   data() {
     return {
       n: { aaa: 3333 },
