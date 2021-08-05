@@ -7,7 +7,9 @@
       <div class="myName" v-show="show">我的名字</div>
     </transition>
 
+    <!-- appear属性，表示在初始化时，也执行一次过渡 -->
     <transition
+      appear
       enter-active-class="animate__animated animate__slideInRight"
       leave-active-class="animate__animated animate__slideInLeft"
     >
