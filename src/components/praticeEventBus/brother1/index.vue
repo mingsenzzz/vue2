@@ -6,6 +6,7 @@
     <!-- 无名的插槽 -->
     <slot></slot>
     子组件1
+    <div>$parent的data----{{ $parent.parentData }}</div>
     <button @click="sendMsgTo">传送值给brother2</button>
   </div>
 </template>
@@ -18,7 +19,7 @@ export default {
     };
   },
   mounted() {
-    console.log(this.$slots, "this");
+    console.log(this.$parent, "this");
   },
   methods: {
     sendMsgTo() {

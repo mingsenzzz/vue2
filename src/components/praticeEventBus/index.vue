@@ -10,6 +10,7 @@
 
       <div>44444</div>
     </Child1>
+    <div @click="changeParentData">改变parentData</div>
     <Child2 />
   </div>
 </template>
@@ -22,7 +23,17 @@ export default {
     Child1,
     Child2,
   },
+  data() {
+    return {
+      parentData: 22222,
+    };
+  },
   mounted() {},
+  methods: {
+    changeParentData() {
+      this.parentData = 333;
+    },
+  },
 };
 </script>
 
