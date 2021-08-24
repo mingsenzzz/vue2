@@ -1,6 +1,15 @@
 <template>
   <div class="parent">
-    <Child1 />
+    <Child1>
+      <template v-slot:aaa>
+        <div>1111</div>
+      </template>
+      <template v-slot:bbb>
+        <div>2222</div>
+      </template>
+
+      <div>44444</div>
+    </Child1>
     <Child2 />
   </div>
 </template>
