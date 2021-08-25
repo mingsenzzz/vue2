@@ -10,7 +10,7 @@
 
       <div>44444</div>
     </Child1>
-    <div @click="changeParentData">改变parentData</div>
+    <div @click="changeParentData" class="btn">改变parentData</div>
     <Child2 />
   </div>
 </template>
@@ -41,5 +41,8 @@ export default {
 .parent {
   height: 200px;
   width: 200px;
+}
+.btn {
+  margin-top: 100px;
 }
 </style>
